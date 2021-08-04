@@ -21,16 +21,8 @@ export default function Home() {
   const watchwasLearning = watch("wasLearning", false);
   function renderMoreQuestion() {
     if (watchwasLearning === "true" || watchisLearning === "true") {
-      // if (watchisLearning === "true") {
-      // <p>
       console.log("anono");
-
-      // </p>;
-      // spaa
-      // <p></p>
     }
-    // )
-    // console.log(useForm());
   }
 
   const writeFire = async (data) => {
@@ -40,10 +32,6 @@ export default function Home() {
       data,
     });
   };
-
-  //
-
-  // Add a new document in collection "cities"
 
   return (
     <>
@@ -66,7 +54,6 @@ export default function Home() {
                 )}
               />
             </label>
-            {/* 自作ここまで */}
           </div>
           <div>
             <label htmlFor="birth">Q2. 生年を入力してください。</label>
@@ -90,7 +77,6 @@ export default function Home() {
               name="isLearning"
               type="radio"
               value={true}
-              // なぜこの書き方？
               required
             />
             <label htmlFor="isLearning1">はい</label>
@@ -101,7 +87,6 @@ export default function Home() {
               name="isLearning"
               type="radio"
               value={false}
-              //なぜこの書き方？
               required
             />
             <label htmlFor="isLearning2">いいえ</label>
@@ -115,11 +100,9 @@ export default function Home() {
             <input
               id="wasLearning1"
               {...register("wasLearning", { required: true })}
-              // wasLearningという値を登録している
               name="wasLearning"
               type="radio"
               value={true}
-              // required
             />
             <label htmlFor="wasLearning1">はい</label>
             <input
@@ -128,17 +111,9 @@ export default function Home() {
               name="wasLearning"
               type="radio"
               value={false}
-              // required
             />
             <label htmlFor="wasLearning2">いいえ</label>
             {errors.wasLearning && <span>このフィールドは回答必須です。</span>}
-
-            {/* {renderMoreQuestion() && (
-              <span>
-                Q.
-                今まで学習したことのあるプログラミング言語をすべて教えてください
-              </span>
-            )} */}
           </div>
           <div>
             {watchwasLearning === "true" || watchisLearning === "true" ? (
@@ -152,7 +127,6 @@ export default function Home() {
           <input type="submit" value="アンケートを提出する" />
         </form>
       </Container>
-      {/* if(wasLearning1===true)console.log("yattane!") */}
     </>
   );
 }
