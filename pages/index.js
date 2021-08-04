@@ -38,6 +38,7 @@ export default function Home() {
       <Container>
         <h1>プログラミング学習に関するアンケート</h1>
         <form onSubmit={handleSubmit(writeFire)}>
+            {/* const cityRef = db.collection("cities").doc("BJ"); */}
           <div>
             <label htmlFor="name">
               Q1. 名前を入力してください（匿名可）。
