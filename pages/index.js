@@ -19,11 +19,7 @@ export default function Home() {
 
   const watchisLearning = watch("isLearning", false);
   const watchwasLearning = watch("wasLearning", false);
-  function renderMoreQuestion() {
-    if (watchwasLearning === "true" || watchisLearning === "true") {
-      console.log("anono");
-    }
-  }
+ 
 
   const writeFire = async (data) => {
     console.log(data);
